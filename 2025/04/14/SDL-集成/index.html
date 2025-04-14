@@ -19,21 +19,21 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+    <meta name="description" content="关于集成SDL时可能出现的问题找不到 SDL2&#x2F;sdl.h1sudo apt-get install libsdl2-dev SDL 库编译可以通过运行时提示 SDL 初始化失败首先安装 x111sudo apt-get update sudo apt-get install xorg  其次编译时需要附带这个库1gcc -o dst src.c ...   -lX11(新增)">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://example.com/2025/04/14/hello-world/index.html">
+<meta property="og:title" content="SDL 集成">
+<meta property="og:url" content="http://example.com/2025/04/14/SDL-%E9%9B%86%E6%88%90/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="关于集成SDL时可能出现的问题找不到 SDL2&#x2F;sdl.h1sudo apt-get install libsdl2-dev SDL 库编译可以通过运行时提示 SDL 初始化失败首先安装 x111sudo apt-get update sudo apt-get install xorg  其次编译时需要附带这个库1gcc -o dst src.c ...   -lX11(新增)">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-04-13T23:12:46.497Z">
-<meta property="article:modified_time" content="2023-08-22T07:11:39.173Z">
+<meta property="article:published_time" content="2025-04-14T04:43:33.000Z">
+<meta property="article:modified_time" content="2025-04-14T04:58:35.299Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>Hello World - Hexo</title>
+  <title>SDL 集成 - Hexo</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -199,7 +199,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Hello World"></span>
+            <span id="subtitle" data-typed-text="SDL 集成"></span>
           
         </div>
 
@@ -210,8 +210,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-04-14 07:12" pubdate>
-          2025年4月14日 早上
+        <time datetime="2025-04-14 12:43" pubdate>
+          2025年4月14日 下午
         </time>
       </span>
     
@@ -222,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          18 字
+          61 字
         
       </span>
     
@@ -270,24 +270,14 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Hello World</h1>
+            <h1 id="seo-header">SDL 集成</h1>
             
             
               <div class="markdown-body">
                 
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+                <h2 id="关于集成SDL时可能出现的问题"><a href="#关于集成SDL时可能出现的问题" class="headerlink" title="关于集成SDL时可能出现的问题"></a>关于集成SDL时可能出现的问题</h2><h3 id="找不到-SDL2-sdl-h"><a href="#找不到-SDL2-sdl-h" class="headerlink" title="找不到 SDL2&#x2F;sdl.h"></a>找不到 SDL2&#x2F;sdl.h</h3><figure class="highlight q"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs q">sudo apt-<span class="hljs-built_in">get</span> install libsdl2-<span class="hljs-built_in">dev</span><br></code></pre></td></tr></table></figure>
+<h3 id="SDL-库编译可以通过运行时提示-SDL-初始化失败"><a href="#SDL-库编译可以通过运行时提示-SDL-初始化失败" class="headerlink" title="SDL 库编译可以通过运行时提示 SDL 初始化失败"></a>SDL 库编译可以通过运行时提示 SDL 初始化失败</h3><h4 id="首先安装-x11"><a href="#首先安装-x11" class="headerlink" title="首先安装 x11"></a>首先安装 x11</h4><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs routeros">sudo apt-<span class="hljs-built_in">get</span> update sudo apt-<span class="hljs-built_in">get</span> install xorg <br></code></pre></td></tr></table></figure>
+<h4 id="其次编译时需要附带这个库"><a href="#其次编译时需要附带这个库" class="headerlink" title="其次编译时需要附带这个库"></a>其次编译时需要附带这个库</h4><figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs scss">gcc -o dst <span class="hljs-attribute">src</span><span class="hljs-selector-class">.c</span> ...   <span class="hljs-built_in">-lX11</span>(新增)<br></code></pre></td></tr></table></figure>
 
                 
               </div>
@@ -305,8 +295,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Hello World</div>
-      <div>http://example.com/2025/04/14/hello-world/</div>
+      <div>SDL 集成</div>
+      <div>http://example.com/2025/04/14/SDL-集成/</div>
     </div>
     <div class="license-meta">
       
@@ -350,15 +340,15 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/04/14/SDL-%E9%9B%86%E6%88%90/" title="SDL 集成">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">SDL 集成</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
+                    
+                      <a href="/2025/04/14/hello-world/" title="Hello World">
+                        <span class="hidden-mobile">Hello World</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
                     
                   </article>
                 </div>
