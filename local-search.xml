@@ -4,6 +4,32 @@
   
   
   <entry>
+    <title>组合数问题</title>
+    <link href="/2025/04/21/%E7%BB%84%E5%90%88%E6%95%B0%E9%97%AE%E9%A2%98/"/>
+    <url>/2025/04/21/%E7%BB%84%E5%90%88%E6%95%B0%E9%97%AE%E9%A2%98/</url>
+    
+    <content type="html"><![CDATA[<h1 id="组合数问题"><a href="#组合数问题" class="headerlink" title="组合数问题"></a>组合数问题</h1><h2 id="1-插板法"><a href="#1-插板法" class="headerlink" title="1. 插板法"></a>1. 插板法</h2><h3 id="1-1-非空插板"><a href="#1-1-非空插板" class="headerlink" title="1.1 非空插板"></a>1.1 非空插板</h3><p>考虑所有元素全部被划分且不为空的情况，n个元素有n-1个插位位置,被m-1块板划分成m组<br>$${n-1 \choose m-1} \tag{1}$$</p><h3 id="1-2-含空插板"><a href="#1-2-含空插板" class="headerlink" title="1.2 含空插板"></a>1.2 含空插板</h3><p>$如果在所有元素被划分完成的前提下存在空划分，则产生额外的m-1个空位置（最多有m-1 组为空），被m-1 块板分为m 组$<br>$${n+m-1\choose m-1} \tag{2}$$</p><h2 id="2-分组问题"><a href="#2-分组问题" class="headerlink" title="2. 分组问题"></a>2. 分组问题</h2><h3 id="2-1-每组至少分到一个的分法"><a href="#2-1-每组至少分到一个的分法" class="headerlink" title="2.1 每组至少分到一个的分法"></a>2.1 每组至少分到一个的分法</h3><p>等同于1.1 的插板法<br>$${n-1 \choose m-1} \tag{3}$$</p><h3 id="2-2-每组至少分到k个-1-leqslant-k-leqslant-lfloor-frac-n-m-rfloor"><a href="#2-2-每组至少分到k个-1-leqslant-k-leqslant-lfloor-frac-n-m-rfloor" class="headerlink" title="2.2 每组至少分到k个$(1 \leqslant k  \leqslant \lfloor \frac{n}{m} \rfloor  ) $"></a>2.2 每组至少分到k个$(1 \leqslant k  \leqslant \lfloor \frac{n}{m} \rfloor  ) $</h3><p>这种情况考虑每个组都预先分配 k 个，总体还剩余$n-km$,然后转为每组至少分到0个的情况（使用1.2的方法）<br>$$ {n-mk +m-1 \choose m-1} &#x3D;{n-(m-1)k-1 \choose m-1 } \tag{4}$$</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>ubuntu</title>
+    <link href="/2025/04/16/ubuntu/"/>
+    <url>/2025/04/16/ubuntu/</url>
+    
+    <content type="html"><![CDATA[<h2 id="ubuntu-出现-the-system-is-running-in-low-graphics-mode"><a href="#ubuntu-出现-the-system-is-running-in-low-graphics-mode" class="headerlink" title="ubuntu 出现 the system is running in low-graphics mode"></a>ubuntu 出现 the system is running in low-graphics mode</h2><p>1.首先尝试了将xorg 的错误文件改名<br>2.重装桌面</p><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs applescript">sudo apt-<span class="hljs-keyword">get</span> install <span class="hljs-comment">--reinstall ubuntu-desktop</span><br></code></pre></td></tr></table></figure><p>出现黑屏<br>3. 尝试 recovery mode<br>仍然黑屏<br>4. 历时3h,暂时放弃（qaq）<br>5. 猜测是Vmware 和 老版本ubuntu 的冲突，解决方案都是底层命令，有这个时间不如重装（乐） </p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>SDL 集成</title>
     <link href="/2025/04/14/SDL-%E9%9B%86%E6%88%90/"/>
     <url>/2025/04/14/SDL-%E9%9B%86%E6%88%90/</url>

@@ -19,21 +19,21 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-    <meta name="description" content="关于集成SDL时可能出现的问题找不到 SDL2&#x2F;sdl.h1sudo apt-get install libsdl2-dev SDL 库编译可以通过运行时提示 SDL 初始化失败首先安装 x111sudo apt-get update sudo apt-get install xorg  其次编译时需要附带这个库1gcc -o dst src.c ...   -lX11(新增)">
+    <meta name="description" content="组合数问题1. 插板法1.1 非空插板考虑所有元素全部被划分且不为空的情况，n个元素有n-1个插位位置,被m-1块板划分成m组$${n-1 \choose m-1} \tag{1}$$ 1.2 含空插板$如果在所有元素被划分完成的前提下存在空划分，则产生额外的m-1个空位置（最多有m-1 组为空），被m-1 块板分为m 组$$${n+m-1\choose m-1} \tag{2}$$ 2. 分组问">
 <meta property="og:type" content="article">
-<meta property="og:title" content="SDL 集成">
-<meta property="og:url" content="http://example.com/2025/04/14/SDL-%E9%9B%86%E6%88%90/index.html">
+<meta property="og:title" content="组合数问题">
+<meta property="og:url" content="http://example.com/2025/04/21/%E7%BB%84%E5%90%88%E6%95%B0%E9%97%AE%E9%A2%98/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="关于集成SDL时可能出现的问题找不到 SDL2&#x2F;sdl.h1sudo apt-get install libsdl2-dev SDL 库编译可以通过运行时提示 SDL 初始化失败首先安装 x111sudo apt-get update sudo apt-get install xorg  其次编译时需要附带这个库1gcc -o dst src.c ...   -lX11(新增)">
+<meta property="og:description" content="组合数问题1. 插板法1.1 非空插板考虑所有元素全部被划分且不为空的情况，n个元素有n-1个插位位置,被m-1块板划分成m组$${n-1 \choose m-1} \tag{1}$$ 1.2 含空插板$如果在所有元素被划分完成的前提下存在空划分，则产生额外的m-1个空位置（最多有m-1 组为空），被m-1 块板分为m 组$$${n+m-1\choose m-1} \tag{2}$$ 2. 分组问">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-04-14T04:43:33.000Z">
-<meta property="article:modified_time" content="2025-04-14T04:58:35.299Z">
+<meta property="article:published_time" content="2025-04-20T22:42:32.000Z">
+<meta property="article:modified_time" content="2025-04-20T23:12:17.243Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>SDL 集成 - Hexo</title>
+  <title>组合数问题 - Hexo</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -199,7 +199,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="SDL 集成"></span>
+            <span id="subtitle" data-typed-text="组合数问题"></span>
           
         </div>
 
@@ -210,8 +210,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-04-14 12:43" pubdate>
-          2025年4月14日 下午
+        <time datetime="2025-04-21 06:42" pubdate>
+          2025年4月21日 早上
         </time>
       </span>
     
@@ -222,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          61 字
+          231 字
         
       </span>
     
@@ -233,7 +233,7 @@
         
         
         
-          1 分钟
+          2 分钟
         
       </span>
     
@@ -270,14 +270,15 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">SDL 集成</h1>
+            <h1 id="seo-header">组合数问题</h1>
             
             
               <div class="markdown-body">
                 
-                <h2 id="关于集成SDL时可能出现的问题"><a href="#关于集成SDL时可能出现的问题" class="headerlink" title="关于集成SDL时可能出现的问题"></a>关于集成SDL时可能出现的问题</h2><h3 id="找不到-SDL2-sdl-h"><a href="#找不到-SDL2-sdl-h" class="headerlink" title="找不到 SDL2&#x2F;sdl.h"></a>找不到 SDL2&#x2F;sdl.h</h3><figure class="highlight q"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs q">sudo apt-<span class="hljs-built_in">get</span> install libsdl2-<span class="hljs-built_in">dev</span><br></code></pre></td></tr></table></figure>
-<h3 id="SDL-库编译可以通过运行时提示-SDL-初始化失败"><a href="#SDL-库编译可以通过运行时提示-SDL-初始化失败" class="headerlink" title="SDL 库编译可以通过运行时提示 SDL 初始化失败"></a>SDL 库编译可以通过运行时提示 SDL 初始化失败</h3><h4 id="首先安装-x11"><a href="#首先安装-x11" class="headerlink" title="首先安装 x11"></a>首先安装 x11</h4><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs routeros">sudo apt-<span class="hljs-built_in">get</span> update sudo apt-<span class="hljs-built_in">get</span> install xorg <br></code></pre></td></tr></table></figure>
-<h4 id="其次编译时需要附带这个库"><a href="#其次编译时需要附带这个库" class="headerlink" title="其次编译时需要附带这个库"></a>其次编译时需要附带这个库</h4><figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs scss">gcc -o dst <span class="hljs-attribute">src</span><span class="hljs-selector-class">.c</span> ...   <span class="hljs-built_in">-lX11</span>(新增)<br></code></pre></td></tr></table></figure>
+                <h1 id="组合数问题"><a href="#组合数问题" class="headerlink" title="组合数问题"></a>组合数问题</h1><h2 id="1-插板法"><a href="#1-插板法" class="headerlink" title="1. 插板法"></a>1. 插板法</h2><h3 id="1-1-非空插板"><a href="#1-1-非空插板" class="headerlink" title="1.1 非空插板"></a>1.1 非空插板</h3><p>考虑所有元素全部被划分且不为空的情况，n个元素有n-1个插位位置,被m-1块板划分成m组<br>$${n-1 \choose m-1} \tag{1}$$</p>
+<h3 id="1-2-含空插板"><a href="#1-2-含空插板" class="headerlink" title="1.2 含空插板"></a>1.2 含空插板</h3><p>$如果在所有元素被划分完成的前提下存在空划分，则产生额外的m-1个空位置（最多有m-1 组为空），被m-1 块板分为m 组$<br>$${n+m-1\choose m-1} \tag{2}$$</p>
+<h2 id="2-分组问题"><a href="#2-分组问题" class="headerlink" title="2. 分组问题"></a>2. 分组问题</h2><h3 id="2-1-每组至少分到一个的分法"><a href="#2-1-每组至少分到一个的分法" class="headerlink" title="2.1 每组至少分到一个的分法"></a>2.1 每组至少分到一个的分法</h3><p>等同于1.1 的插板法<br>$${n-1 \choose m-1} \tag{3}$$</p>
+<h3 id="2-2-每组至少分到k个-1-leqslant-k-leqslant-lfloor-frac-n-m-rfloor"><a href="#2-2-每组至少分到k个-1-leqslant-k-leqslant-lfloor-frac-n-m-rfloor" class="headerlink" title="2.2 每组至少分到k个$(1 \leqslant k  \leqslant \lfloor \frac{n}{m} \rfloor  ) $"></a>2.2 每组至少分到k个$(1 \leqslant k  \leqslant \lfloor \frac{n}{m} \rfloor  ) $</h3><p>这种情况考虑每个组都预先分配 k 个，总体还剩余$n-km$,然后转为每组至少分到0个的情况（使用1.2的方法）<br>$$ {n-mk +m-1 \choose m-1} &#x3D;{n-(m-1)k-1 \choose m-1 } \tag{4}$$</p>
 
                 
               </div>
@@ -295,8 +296,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>SDL 集成</div>
-      <div>http://example.com/2025/04/14/SDL-集成/</div>
+      <div>组合数问题</div>
+      <div>http://example.com/2025/04/21/组合数问题/</div>
     </div>
     <div class="license-meta">
       
@@ -308,7 +309,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年4月14日</div>
+          <div>2025年4月21日</div>
         </div>
       
       
@@ -340,18 +341,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/04/16/ubuntu/" title="ubuntu">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">ubuntu</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/04/14/hello-world/" title="Hello World">
-                        <span class="hidden-mobile">Hello World</span>
+                      <a href="/2025/04/16/ubuntu/" title="ubuntu">
+                        <span class="hidden-mobile">ubuntu</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
