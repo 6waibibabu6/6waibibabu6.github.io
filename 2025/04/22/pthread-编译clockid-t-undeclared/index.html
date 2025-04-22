@@ -19,21 +19,21 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-    <meta name="description" content="组合数问题1. 插板法1.1 非空插板考虑所有元素全部被划分且不为空的情况，n个元素有n-1个插位位置,被m-1块板划分成m组$${n-1 \choose m-1} \tag{1}$$ 1.2 含空插板$如果在所有元素被划分完成的前提下存在空划分，则产生额外的m-1个空位置（最多有m-1 组为空），被m-1 块板分为m 组$$${n+m-1\choose m-1} \tag{2}$$ 2. 分组问">
+    <meta name="description" content="试了一堆方法，最后我是通过自己定义解决的。在pthread.h 中添加一行 1typedef int clockid_t">
 <meta property="og:type" content="article">
-<meta property="og:title" content="组合数问题">
-<meta property="og:url" content="http://example.com/2025/04/21/%E7%BB%84%E5%90%88%E6%95%B0%E9%97%AE%E9%A2%98/index.html">
+<meta property="og:title" content="pthread 编译clockid_t undeclared">
+<meta property="og:url" content="http://example.com/2025/04/22/pthread-%E7%BC%96%E8%AF%91clockid-t-undeclared/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="组合数问题1. 插板法1.1 非空插板考虑所有元素全部被划分且不为空的情况，n个元素有n-1个插位位置,被m-1块板划分成m组$${n-1 \choose m-1} \tag{1}$$ 1.2 含空插板$如果在所有元素被划分完成的前提下存在空划分，则产生额外的m-1个空位置（最多有m-1 组为空），被m-1 块板分为m 组$$${n+m-1\choose m-1} \tag{2}$$ 2. 分组问">
+<meta property="og:description" content="试了一堆方法，最后我是通过自己定义解决的。在pthread.h 中添加一行 1typedef int clockid_t">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-04-20T22:42:32.000Z">
-<meta property="article:modified_time" content="2025-04-20T23:12:17.243Z">
+<meta property="article:published_time" content="2025-04-22T02:13:44.000Z">
+<meta property="article:modified_time" content="2025-04-22T02:15:32.119Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>组合数问题 - Hexo</title>
+  <title>pthread 编译clockid_t undeclared - Hexo</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -199,7 +199,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="组合数问题"></span>
+            <span id="subtitle" data-typed-text="pthread 编译clockid_t undeclared"></span>
           
         </div>
 
@@ -210,8 +210,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-04-21 06:42" pubdate>
-          2025年4月21日 早上
+        <time datetime="2025-04-22 10:13" pubdate>
+          2025年4月22日 上午
         </time>
       </span>
     
@@ -222,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          231 字
+          27 字
         
       </span>
     
@@ -233,7 +233,7 @@
         
         
         
-          2 分钟
+          1 分钟
         
       </span>
     
@@ -270,15 +270,14 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">组合数问题</h1>
+            <h1 id="seo-header">pthread 编译clockid_t undeclared</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="组合数问题"><a href="#组合数问题" class="headerlink" title="组合数问题"></a>组合数问题</h1><h2 id="1-插板法"><a href="#1-插板法" class="headerlink" title="1. 插板法"></a>1. 插板法</h2><h3 id="1-1-非空插板"><a href="#1-1-非空插板" class="headerlink" title="1.1 非空插板"></a>1.1 非空插板</h3><p>考虑所有元素全部被划分且不为空的情况，n个元素有n-1个插位位置,被m-1块板划分成m组<br>$${n-1 \choose m-1} \tag{1}$$</p>
-<h3 id="1-2-含空插板"><a href="#1-2-含空插板" class="headerlink" title="1.2 含空插板"></a>1.2 含空插板</h3><p>$如果在所有元素被划分完成的前提下存在空划分，则产生额外的m-1个空位置（最多有m-1 组为空），被m-1 块板分为m 组$<br>$${n+m-1\choose m-1} \tag{2}$$</p>
-<h2 id="2-分组问题"><a href="#2-分组问题" class="headerlink" title="2. 分组问题"></a>2. 分组问题</h2><h3 id="2-1-每组至少分到一个的分法"><a href="#2-1-每组至少分到一个的分法" class="headerlink" title="2.1 每组至少分到一个的分法"></a>2.1 每组至少分到一个的分法</h3><p>等同于1.1 的插板法<br>$${n-1 \choose m-1} \tag{3}$$</p>
-<h3 id="2-2-每组至少分到k个-1-leqslant-k-leqslant-lfloor-frac-n-m-rfloor"><a href="#2-2-每组至少分到k个-1-leqslant-k-leqslant-lfloor-frac-n-m-rfloor" class="headerlink" title="2.2 每组至少分到k个$(1 \leqslant k  \leqslant \lfloor \frac{n}{m} \rfloor  ) $"></a>2.2 每组至少分到k个$(1 \leqslant k  \leqslant \lfloor \frac{n}{m} \rfloor  ) $</h3><p>这种情况考虑每个组都预先分配 k 个，总体还剩余$n-km$,然后转为每组至少分到0个的情况（使用1.2的方法）<br>$$ {n-mk +m-1 \choose m-1} &#x3D;{n-(m-1)k-1 \choose m-1 } \tag{4}$$</p>
+                <p>试了一堆方法，最后我是通过自己定义解决的。在pthread.h 中添加一行</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">typedef</span> <span class="hljs-type">int</span> <span class="hljs-type">clockid_t</span><br></code></pre></td></tr></table></figure>
+
 
                 
               </div>
@@ -296,8 +295,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>组合数问题</div>
-      <div>http://example.com/2025/04/21/组合数问题/</div>
+      <div>pthread 编译clockid_t undeclared</div>
+      <div>http://example.com/2025/04/22/pthread-编译clockid-t-undeclared/</div>
     </div>
     <div class="license-meta">
       
@@ -309,7 +308,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年4月21日</div>
+          <div>2025年4月22日</div>
         </div>
       
       
@@ -341,18 +340,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/04/22/pthread-%E7%BC%96%E8%AF%91clockid-t-undeclared/" title="pthread 编译clockid_t undeclared">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">pthread 编译clockid_t undeclared</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/04/16/ubuntu/" title="ubuntu">
-                        <span class="hidden-mobile">ubuntu</span>
+                      <a href="/2025/04/21/%E7%BB%84%E5%90%88%E6%95%B0%E9%97%AE%E9%A2%98/" title="组合数问题">
+                        <span class="hidden-mobile">组合数问题</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

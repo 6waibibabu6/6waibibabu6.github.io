@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title>pthread 编译clockid_t undeclared</title>
+    <link href="/2025/04/22/pthread-%E7%BC%96%E8%AF%91clockid-t-undeclared/"/>
+    <url>/2025/04/22/pthread-%E7%BC%96%E8%AF%91clockid-t-undeclared/</url>
+    
+    <content type="html"><![CDATA[<p>试了一堆方法，最后我是通过自己定义解决的。在pthread.h 中添加一行</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">typedef</span> <span class="hljs-type">int</span> <span class="hljs-type">clockid_t</span><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>组合数问题</title>
     <link href="/2025/04/21/%E7%BB%84%E5%90%88%E6%95%B0%E9%97%AE%E9%A2%98/"/>
     <url>/2025/04/21/%E7%BB%84%E5%90%88%E6%95%B0%E9%97%AE%E9%A2%98/</url>
